@@ -1,0 +1,18 @@
+<head>
+  <meta charset="UTF-8">
+  <title>随机生成个人信息</title>
+</head>
+<button>随机生成个人信息</button>
+<span></span>
+<script>
+  document.querySelector("button").onclick = function () {
+    let xhr = new XMLHttpRequest()
+    xhr.open("GET", "http://localhost/getInfo", true)
+    // console.log(xhr.responseText)
+    xhr.onload = function () {
+      document.querySelector("span").innerText = ""
+      document.querySelector("span").append(document.createTextNode(xhr.responseText))
+    }
+    xhr.send()
+  }
+</script>
