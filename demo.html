@@ -7,7 +7,7 @@
 <script>
   document.querySelector("button").onclick = function () {
     let xhr = new XMLHttpRequest()
-    xhr.open("GET", "http://localhost/getInfo", true)
+    xhr.open("GET", "http://naizi.fun:3000/getInfo", true)
     // console.log(xhr.responseText)
     xhr.onload = function () {
       document.querySelector("span").innerText = ""

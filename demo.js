@@ -1,13 +1,10 @@
 const http = require("http")
 const fs = require("fs")
 const { URL } = require("url")
-const serverAddr = "http://localhost"
+const serverAddr = "http://naizi.fun"
 const Mock = require("mockjs")
-const { json } = require("stream/consumers")
-
 
 http.createServer((req, res) => {
-
   const url = new URL(serverAddr + req.url)
   switch (url.pathname) {
     case "/getInfo":
@@ -28,5 +25,5 @@ http.createServer((req, res) => {
         res.end(`<title>Hello demo</title><h1>404 Not Found</h1>`)
       }
   }
-}).listen(80)
+}).listen(3000)
 console.log(serverAddr)
